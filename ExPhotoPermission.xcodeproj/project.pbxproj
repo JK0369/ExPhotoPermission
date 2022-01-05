@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B03271EB04B0CD25B7622D87 /* Pods_ExPhotoPermission.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455B3406BD70A109A58963E9 /* Pods_ExPhotoPermission.framework */; };
 		C681FD522785B80600A11AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681FD512785B80600A11AEC /* AppDelegate.swift */; };
 		C681FD542785B80600A11AEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681FD532785B80600A11AEC /* SceneDelegate.swift */; };
 		C681FD562785B80600A11AEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681FD552785B80600A11AEC /* ViewController.swift */; };
 		C681FD592785B80600A11AEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C681FD572785B80600A11AEC /* Main.storyboard */; };
 		C681FD5B2785B80700A11AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C681FD5A2785B80700A11AEC /* Assets.xcassets */; };
 		C681FD5E2785B80700A11AEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C681FD5C2785B80700A11AEC /* LaunchScreen.storyboard */; };
+		C681FD682785B81900A11AEC /* PhotoPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681FD672785B81900A11AEC /* PhotoPermissionManager.swift */; };
+		C681FD6A2785D1E800A11AEC /* CameraPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681FD692785D1E800A11AEC /* CameraPermissionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		455B3406BD70A109A58963E9 /* Pods_ExPhotoPermission.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExPhotoPermission.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8380970A2B87E4A7D7489294 /* Pods-ExPhotoPermission.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPhotoPermission.release.xcconfig"; path = "Target Support Files/Pods-ExPhotoPermission/Pods-ExPhotoPermission.release.xcconfig"; sourceTree = "<group>"; };
 		C681FD4E2785B80600A11AEC /* ExPhotoPermission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExPhotoPermission.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C681FD512785B80600A11AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C681FD532785B80600A11AEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		C681FD5A2785B80700A11AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C681FD5D2785B80700A11AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C681FD5F2785B80700A11AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C681FD672785B81900A11AEC /* PhotoPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPermissionManager.swift; sourceTree = "<group>"; };
+		C681FD692785D1E800A11AEC /* CameraPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionManager.swift; sourceTree = "<group>"; };
+		CB0907F51333BB6155D48AD1 /* Pods-ExPhotoPermission.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPhotoPermission.debug.xcconfig"; path = "Target Support Files/Pods-ExPhotoPermission/Pods-ExPhotoPermission.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03271EB04B0CD25B7622D87 /* Pods_ExPhotoPermission.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7FE81F12C770637A275FC27C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB0907F51333BB6155D48AD1 /* Pods-ExPhotoPermission.debug.xcconfig */,
+				8380970A2B87E4A7D7489294 /* Pods-ExPhotoPermission.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AA82413EBFFE1FED6E830418 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				455B3406BD70A109A58963E9 /* Pods_ExPhotoPermission.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C681FD452785B80600A11AEC = {
 			isa = PBXGroup;
 			children = (
 				C681FD502785B80600A11AEC /* ExPhotoPermission */,
 				C681FD4F2785B80600A11AEC /* Products */,
+				7FE81F12C770637A275FC27C /* Pods */,
+				AA82413EBFFE1FED6E830418 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +87,8 @@
 				C681FD512785B80600A11AEC /* AppDelegate.swift */,
 				C681FD532785B80600A11AEC /* SceneDelegate.swift */,
 				C681FD552785B80600A11AEC /* ViewController.swift */,
+				C681FD672785B81900A11AEC /* PhotoPermissionManager.swift */,
+				C681FD692785D1E800A11AEC /* CameraPermissionManager.swift */,
 				C681FD572785B80600A11AEC /* Main.storyboard */,
 				C681FD5A2785B80700A11AEC /* Assets.xcassets */,
 				C681FD5C2785B80700A11AEC /* LaunchScreen.storyboard */,
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C681FD622785B80700A11AEC /* Build configuration list for PBXNativeTarget "ExPhotoPermission" */;
 			buildPhases = (
+				045D3138880F26E89B565692 /* [CP] Check Pods Manifest.lock */,
 				C681FD4A2785B80600A11AEC /* Sources */,
 				C681FD4B2785B80600A11AEC /* Frameworks */,
 				C681FD4C2785B80600A11AEC /* Resources */,
+				0297776E0FFC89112276EE3A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +165,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0297776E0FFC89112276EE3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExPhotoPermission/Pods-ExPhotoPermission-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExPhotoPermission/Pods-ExPhotoPermission-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExPhotoPermission/Pods-ExPhotoPermission-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		045D3138880F26E89B565692 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExPhotoPermission-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C681FD4A2785B80600A11AEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C681FD562785B80600A11AEC /* ViewController.swift in Sources */,
+				C681FD682785B81900A11AEC /* PhotoPermissionManager.swift in Sources */,
 				C681FD522785B80600A11AEC /* AppDelegate.swift in Sources */,
 				C681FD542785B80600A11AEC /* SceneDelegate.swift in Sources */,
+				C681FD6A2785D1E800A11AEC /* CameraPermissionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +360,7 @@
 		};
 		C681FD632785B80700A11AEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB0907F51333BB6155D48AD1 /* Pods-ExPhotoPermission.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +389,7 @@
 		};
 		C681FD642785B80700A11AEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8380970A2B87E4A7D7489294 /* Pods-ExPhotoPermission.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
