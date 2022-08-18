@@ -15,9 +15,11 @@ class PhotoPermissionManager {
   
   func requestPhoto() -> Observable<PHAuthorizationStatus> {
     Observable<PHAuthorizationStatus>.create { observable in
-      PHPhotoLibrary.requestAuthorization {
-        observable.onNext($0)
-        observable.onCompleted()
+      PHPhotoLibrary.requestAuthorization { auth in
+        DispatchQueue.main.async {
+          observable.onNext(auth)
+          observable.onCompleted()
+        }
       }
       return Disposables.create()
     }

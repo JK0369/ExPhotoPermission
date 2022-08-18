@@ -15,8 +15,10 @@ class CameraPermissionManager {
   func requestCamera(mediaType: AVMediaType = .video) -> Observable<Bool> {
     Observable<Bool>.create { observable in
       AVCaptureDevice.requestAccess(for: mediaType) { isGranted in
-        observable.onNext(isGranted)
-        observable.onCompleted()
+        DispatchQueue.main.async {
+          observable.onNext(isGranted)
+          observable.onCompleted()
+        }
       }
       return Disposables.create()
     }
